@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
+/* =========================
+   THEME TOKENS (semantic)
+   ========================= */
+
+/* Dark mode (default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0b0b0c;
+  --card: rgba(255, 255, 255, 0.06);
+  --text: #f3efe6;
+  --muted: rgba(243, 239, 230, 0.68);
+  --rule: rgba(243, 239, 230, 0.18);
+
+  /* Back-compat aliases (so your current classNames keep working) */
+  --ink: var(--bg);
+  --paper: var(--text);
+  --paper2: var(--card);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Light mode (newspaper) */
+.light {
+  --bg: #f7f3eb;     /* paper */
+  --card: #efe9dc;   /* sheet layer */
+  --text: #1c1b18;   /* ink */
+  --muted: rgba(28, 27, 24, 0.65);
+  --rule: rgba(28, 27, 24, 0.12);
+
+  /* Back-compat aliases */
+  --ink: var(--bg);
+  --paper: var(--text);
+  --paper2: var(--card);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =========================
+   BASE STYLES
+   ========================= */
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* =========================
+   GRAIN / PRINT TEXTURE
+   ========================= */
+
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+}
+
+.light .grain::before {
+  opacity: 0.05;
+}
+
+/* =========================
+   OPTIONAL: nicer selection
+   ========================= */
+
+::selection {
+  background: color-mix(in srgb, var(--text) 20%, transparent);
+}
+
+/* =========================
+   PULL QUOTES
+   ========================= */
+
+.pull-quote {
+  font-family: ui-serif, Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: var(--paper);
+  opacity: 0.9;
+  margin: 2.5rem 0;
+}
+
+/* Desktop: pull into margin */
+@media (min-width: 1024px) {
+  .pull-quote {
+    position: relative;
+    float: right;
+    width: 40%;
+    margin: 0.5rem -45% 1.5rem 2rem;
+    padding-left: 1.25rem;
+    border-left: 1px solid var(--rule);
+  }
+}
+
+/* Light mode tuning */
+.light .pull-quote {
+  color: var(--paper);
 }
