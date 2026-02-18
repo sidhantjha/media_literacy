@@ -64,7 +64,7 @@
               <div className="h-full flex flex-col">
                 <div className="flex-1 overflow-hidden rounded-2xl border border-[var(--rule)] shadow-2xl">
                   <Image
-                    src="/images/hero/sis2.jpg"
+                    src="/images/hero/SIS22.jpg"
                     alt="Featured visual"
                     width={1600}
                     height={900}
@@ -75,7 +75,7 @@
 
                 <div className="mt-6 max-w-[90%]">
                   <h2 className="font-serif text-4xl leading-tight">
-                    Reading the world is not about speed, but about attention.
+                    "Journalism is printing what someone else does not want printed. Everything else is public relations."
                   </h2>
                   <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
                     Media literacy is the quiet practice of noticing structure, incentives,
@@ -100,11 +100,11 @@
 
                 <div className="overflow-hidden rounded-2xl border border-[var(--rule)]">
                   <Image
-                    src="/images/hero/sis4.jpg"
+                    src="/images/hero/sis44.jpg"
                     alt="Secondary visual"
                     width={800}
-                    height={600}
-                    className="h-[400px] w-full object-fit"
+                    height={800}
+                    className="h-[400px] w-full object-cover"
                   />
                 </div>
               </div>
