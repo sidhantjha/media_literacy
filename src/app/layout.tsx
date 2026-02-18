@@ -18,10 +18,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="grain">
         <ThemeProviders>
-          <div className="mx-auto max-w-6xl px-4">
-            <header className="py-8">
-              <div className="flex items-baseline justify-between gap-6">
-                <Link href="/" className="group">
+          <div className="w-full px-4">
+            {/* =====================
+               HEADER
+               ===================== */}
+            <header className="py-8 px-8">
+              <div className="grid grid-cols-3 items-center">
+                {/* LEFT: Brand */}
+                <Link href="/" className="group justify-self-start">
                   <div className="text-xs tracking-[0.35em] text-[var(--muted)]">
                     THE JOURNAL
                   </div>
@@ -31,38 +35,45 @@ export default function RootLayout({
                   </div>
                 </Link>
 
-                <nav className="flex items-center gap-5 text-sm text-[var(--muted)]">
+                {/* CENTER: Nav */}
+                <nav className="justify-self-center flex items-center gap-8 text-base text-[var(--muted)]">
                   <Link
-                    className="hover:text-[var(--paper)]"
+                    className="hover:text-[var(--paper)] transition"
                     href="/articles"
                   >
                     Articles
                   </Link>
                   <Link
-                    className="hover:text-[var(--paper)]"
+                    className="hover:text-[var(--paper)] transition"
                     href="/about"
                   >
                     About
                   </Link>
                   <ThemeToggle />
                 </nav>
+
+                {/* RIGHT: Spacer to keep center true */}
+                <div className="justify-self-end" />
               </div>
 
               <div className="mt-6 h-px w-full bg-[var(--rule)]" />
             </header>
 
+            {/* =====================
+               PAGE CONTENT
+               ===================== */}
             {children}
 
+            {/* =====================
+               FOOTER
+               ===================== */}
             <footer className="py-10">
               <div className="h-px w-full bg-[var(--rule)]" />
               <div className="mt-6 text-xs text-[var(--muted)]">
-                © {new Date().getFullYear()} • Built with care • Print-first
-                thinking
+                © {new Date().getFullYear()} • Built with care • Print-first thinking
                 <span className="mx-2">—</span>
                 A project by{" "}
-                <span className="text-[var(--paper)]">
-                  Maitreyi Jha
-                </span>
+                <span className="text-[var(--paper)]">Maitreyi Jha</span>
               </div>
             </footer>
           </div>

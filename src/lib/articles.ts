@@ -41,8 +41,13 @@ export function getAllArticles(): ArticleMeta[] {
   return articles.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export function getArticleBySlug(slug: string): { meta: ArticleMeta; content: string } {
+export function getArticleBySlug(
+  slug: string
+): { meta: ArticleMeta; content: string } | null {
   const fullPath = path.join(ARTICLES_DIR, `${slug}.mdx`);
+
+  if (!fs.existsSync(fullPath)) return null;
+
   const raw = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(raw);
 
