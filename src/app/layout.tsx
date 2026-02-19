@@ -26,12 +26,8 @@ export default function RootLayout({
               <div className="grid grid-cols-3 items-center">
                 {/* LEFT: Brand */}
                 <Link href="/" className="group justify-self-start">
-                  <div className="text-xs tracking-[0.35em] text-[var(--muted)]">
-                    THE JOURNAL
-                  </div>
-                  <div className="mt-2 font-serif text-3xl leading-none">
-                    Critical Thinking
-                    <span className="ml-2 text-[var(--muted)]">—</span>
+                  <div className="text-m tracking-[0.35em]">
+                    Writing on the Wall
                   </div>
                 </Link>
 

@@ -5,7 +5,7 @@ export default function ArticlesPage() {
   const articles = getAllArticles();
 
   return (
-    <main className="pb-16">
+    <main className="pb-16 px-4">
       <div className="flex items-end justify-between gap-6">
         <h1 className="font-serif text-4xl">Articles</h1>
         <div className="text-xs tracking-[0.25em] text-[var(--muted)]">
@@ -14,8 +14,7 @@ export default function ArticlesPage() {
       </div>
 
       <p className="mt-3 max-w-prose text-sm leading-6 text-[var(--muted)]">
-        Essays on media literacy, critical thinking, and the quiet craft of
-        reading the world clearly.
+        Essays on topics ranging a grand scale - aimed at looking through a magnifying glass and giving you the truth.
       </p>
 
       <div className="mt-6 h-px w-full bg-[var(--rule)]" />

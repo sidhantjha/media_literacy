@@ -125,13 +125,11 @@
                 </div>
 
                 <h2 className="mt-4 font-serif text-3xl leading-tight">
-                  Essays for slower, clearer thinking.
+                  Essays which do not leave the quiet part unsaid.
                 </h2>
 
                 <p className="mt-4 text-sm leading-7 text-[var(--muted)]">
-                  These pieces focus less on reaction and more on structure — how
-                  arguments are framed, how incentives distort truth, and how careful
-                  reading restores clarity in noisy environments.
+                  Noticing patterns, bias, the origin of concepts and their validity - a brain exercise and the writing on the wall before the wall ever does collapse. The silence you need when the noise of irrationality gets too loud. 
                 </p>
 
                 <div className="mt-auto pt-6">
@@ -213,7 +211,10 @@
               It involves understanding how stories are constructed, why certain frames
               dominate discourse, and how incentives quietly shape what is amplified or
               ignored. It is less about checking individual facts and more about noticing
-              patterns — what repeats, who benefits, and what remains unsaid.
+              patterns — what repeats, who benefits, and what remains unsaid. This page hopes
+               to help you start recognizing the patterns that create a literate consumer of media,
+                prevent propaganda, expose the true nature of the world we live in and how
+                 it may be reformed.
             </p>
           </div>
         </section>
