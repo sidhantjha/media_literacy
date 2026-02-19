@@ -26,7 +26,7 @@ export default function RootLayout({
               <div className="grid grid-cols-3 items-center">
                 {/* LEFT: Brand */}
                 <Link href="/" className="group justify-self-start">
-                  <div className="text-m tracking-[0.35em]">
+                  <div className="text-m text-xl font-bold tracking-[0.35em]">
                     Writing on the Wall
                   </div>
                 </Link>
